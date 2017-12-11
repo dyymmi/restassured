@@ -1,5 +1,7 @@
 import org.junit.Test;
 
+import java.util.Random;
+
 import static org.hamcrest.Matchers.containsString;
 
 import static com.jayway.restassured.RestAssured.given;
@@ -36,5 +38,15 @@ public class GetRestTest extends FunctionalTest {
                 .body("address.zipcode", equalTo("90566-7771"))
                 .body("address.geo.lat", equalTo("-43.9509"))
                 .statusCode(200);
+    }
+
+    @Test
+    public void GetPostWithParam() throws Exception {
+       Random random = new Random();
+        int postId = random.nextInt(100)+1;
+
+        given().pathParam("postId", postId)
+                .when().get("/posts/{postId}").then()
+                .body("id", equalTo(postId));
     }
 }
