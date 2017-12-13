@@ -6,6 +6,7 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 public class SchemaValidation extends FunctionalTest {
     @Test
     public void userSchemaValidation() {
-        given().when().get("/users").then().assertThat().body(matchesJsonSchemaInClasspath("user-schema.json"));
+        given().when().get("/users/1")
+                .then().assertThat().body(matchesJsonSchemaInClasspath("user-schema.json"));
     }
 }
