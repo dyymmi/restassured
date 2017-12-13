@@ -35,7 +35,7 @@ public class JavaObjectPostTest extends FunctionalTest {
     }
 
     @Test
-    public void SendJavaObject() throws Exception {
+    public void sendJavaObject() throws Exception {
         JavaObjectPostTest javaObjectPostTest = new JavaObjectPostTest();
         javaObjectPostTest.setTitle("Test RestAssured post");
         javaObjectPostTest.setBody("RestAssured post body test content");

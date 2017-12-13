@@ -6,13 +6,12 @@ import java.util.Map;
 import static com.jayway.restassured.RestAssured.given;
 
 public class PostRestTest extends FunctionalTest {
-
     @Test
-    public void AddPost() {
-        Map<String, String> post = new HashMap<String, String>(); //Hashmap is not suitable for mixed value types.
+    public void addPost() {
+        Map<String, String> post = new HashMap<String, String>();
         post.put("title", "Test RestAssured post");
         post.put("body", "RestAssured post body test content");
-        post.put("userId", "7"); //Here should be int but it's not possible
+        post.put("userId", "7");
 
         given()
                 .contentType("application/json")
