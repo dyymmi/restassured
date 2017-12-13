@@ -33,7 +33,7 @@ public class JavaObjectPostTest extends FunctionalTest {
     }
 
     @Test
-    public void SendJavaObject() throws Exception {
+    public void sendJavaObject() throws Exception {
         JavaObjectPostTest javaObjectPostTest = new JavaObjectPostTest();
         javaObjectPostTest.setTitle("Java object post title");
         javaObjectPostTest.setBody("Java object post body");
