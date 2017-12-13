@@ -51,7 +51,7 @@ public class CommentsTest extends FunctionalTest {
     }
 
     @Test
-    public void CommentTest() throws Exception {
+    public void commentTest() throws Exception {
         CommentsTest commentsTest = given().when().get("/comments/1").as(CommentsTest.class);
 
         assertTrue(commentsTest.postId == 1);

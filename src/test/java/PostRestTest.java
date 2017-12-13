@@ -7,7 +7,7 @@ import static com.jayway.restassured.RestAssured.given;
 
 public class PostRestTest extends FunctionalTest {
     @Test
-    public void AddPost() {
+    public void addPost() {
         Map<String, String> post = new HashMap<String, String>();
         post.put("title", "Test RestAssured post");
         post.put("body", "RestAssured post body test content");
