@@ -41,7 +41,7 @@ public class GetRestTest extends FunctionalTest {
     }
 
     @Test
-    public void GetPostWithParam() throws Exception {
+    public void getPostWithParam() throws Exception {
        Random random = new Random();
         int postId = random.nextInt(100)+1;
 
