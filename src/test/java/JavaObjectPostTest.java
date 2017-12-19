@@ -47,7 +47,7 @@ public class JavaObjectPostTest extends FunctionalTest {
     }
 
     @Test
-    public void AddPostAndVerify() throws Exception {
+    public void addPostAndVerify() throws Exception {
         JavaObjectPostTest javaObjectPostTest = new JavaObjectPostTest();
         javaObjectPostTest.setTitle("Test RestAssured post");
         javaObjectPostTest.setBody("RestAssured post body test content");
