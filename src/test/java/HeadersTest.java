@@ -1,12 +1,12 @@
-import com.jayway.restassured.response.Headers;
-import com.jayway.restassured.response.Response;
+import io.restassured.http.Headers;
+import io.restassured.response.Response;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Map;
 
-import static com.jayway.restassured.RestAssured.get;
-import static com.jayway.restassured.RestAssured.given;
+import static io.restassured.RestAssured.get;
+import static io.restassured.RestAssured.given;
 
 public class HeadersTest extends FunctionalTest {
     @Test

@@ -1,6 +1,7 @@
 import org.junit.Test;
 
-import static com.jayway.restassured.RestAssured.given;
+
+import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.hasItems;
 
 public class UsingGroovyTest extends FunctionalTest {

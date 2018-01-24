@@ -1,8 +1,8 @@
-import com.jayway.restassured.response.Response;
+import io.restassured.response.Response;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static com.jayway.restassured.RestAssured.given;
+import static io.restassured.RestAssured.given;
 
 public class JavaObjectPostTest extends FunctionalTest {
 

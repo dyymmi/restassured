@@ -1,4 +1,5 @@
-import com.jayway.restassured.RestAssured;
+
+import io.restassured.RestAssured;
 import org.junit.BeforeClass;
 
 public class FunctionalTest {
