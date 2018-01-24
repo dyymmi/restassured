@@ -19,7 +19,6 @@ public class PostsSteps {
 
     @When("^I get post for id (\\d+)$")
     public void iGetPostForId(int id) {
-        //responseHolder.setResponse(weatherActions.getWeatherForCity(cityName))
         responseHolder.setResponse(postsActions.getPostForId(id));
     }
 
@@ -40,4 +39,5 @@ public class PostsSteps {
         Post post = ResponseHelper.getObjectFromResponse(responseHolder.getResponse(), Post.class);
         Assert.assertEquals("User ID is incorrect", id, post.getUserId());
     }
+
 }
