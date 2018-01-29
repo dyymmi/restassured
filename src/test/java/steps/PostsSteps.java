@@ -9,6 +9,8 @@ import org.junit.Assert;
 import utils.ResponseHelper;
 import utils.ResponseHolder;
 
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+
 public class PostsSteps {
     private ResponseHolder responseHolder;
     private static PostsActions postsActions = new PostsActions();
@@ -34,10 +36,11 @@ public class PostsSteps {
         Assert.assertEquals("Post title does not match", title, post.getTitle());
     }
 
-    @And("^userId should be (\\d+)$")
-    public void useridShouldBe(int id) throws Throwable {
+    @And("^user Id should be (\\d+)$")
+    public void userIdShouldBe(int id) throws Throwable {
         Post post = ResponseHelper.getObjectFromResponse(responseHolder.getResponse(), Post.class);
         Assert.assertEquals("User ID is incorrect", id, post.getUserId());
+        //Assert.assertThat(post.getBody(), matchesJsonSchemaInClasspath("user-schema.json"));
     }
 
 }
