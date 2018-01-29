@@ -16,7 +16,7 @@ public class ResponseHelper {
         return response.then().extract().as(objectType);
     }
 
-    public static void validateResponseSchema(Response response, String schema){
+    public static void validateResponseSchema(Response response, String schema) {
         schema = schema + ".json";
         response.then().body(matchesJsonSchemaInClasspath(schema));
     }

@@ -1,63 +1,81 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
-    "title": "User",
-    "description": "User of the application",
-    "type": "object",
-    "properties": {
-        "id": {
-            "description": "Unique identifier of a user",
-            "type": "integer"
-        },
-        "name": {
-            "description": "Name of a user",
-            "type": "string"
-        },
-        "username": {
-            "description": "Userame of a user",
-            "type": "string"
-        },
-        "email": {
-            "description": "User's contact email",
-            "type": "string"
-        },
-        "address": {
-            "type": "object",
-            "description": "User's address",
-            "properties": {
-                "street": {"type":"string"},
-                "suite": {"type":"string"},
-                "city": {"type":"string"},
-                "zipcode": {"type":"string"},
-                "geo":{
-                    "type":"object",
-                    "properties": {
-                        "lat": {"type":"string"},
-                        "lng": {"type": "string"}
-                    }
-                }
-            }
-        },
-        "phone": {
-            "description": "User's contact phone",
-            "type": "string"
-        },
-        "website": {
-            "description": "User's website",
-            "type": "string"
-        },
-        "company": {
-            "description": "User's company",
-            "type": "object",
-            "properties": {
-                "name": {"type":"string"},
-                "catchPhrase": {"type": "string"},
-                "bs": {"type": "string"}
-            }
-        }
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "User",
+  "description": "User of the application",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Unique identifier of a user",
+      "type": "integer"
     },
-    "required": [
-        "id",
-        "name",
-        "username"
-    ]
+    "name": {
+      "description": "Name of a user",
+      "type": "string"
+    },
+    "username": {
+      "description": "Userame of a user",
+      "type": "string"
+    },
+    "email": {
+      "description": "User's contact email",
+      "type": "string"
+    },
+    "address": {
+      "type": "object",
+      "description": "User's address",
+      "properties": {
+        "street": {
+          "type": "string"
+        },
+        "suite": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "zipcode": {
+          "type": "string"
+        },
+        "geo": {
+          "type": "object",
+          "properties": {
+            "lat": {
+              "type": "string"
+            },
+            "lng": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "phone": {
+      "description": "User's contact phone",
+      "type": "string"
+    },
+    "website": {
+      "description": "User's website",
+      "type": "string"
+    },
+    "company": {
+      "description": "User's company",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "catchPhrase": {
+          "type": "string"
+        },
+        "bs": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "username"
+  ]
 }

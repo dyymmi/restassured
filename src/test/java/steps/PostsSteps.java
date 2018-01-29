@@ -9,8 +9,6 @@ import org.junit.Assert;
 import utils.ResponseHelper;
 import utils.ResponseHolder;
 
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
-
 public class PostsSteps {
     private ResponseHolder responseHolder;
     private static PostsActions postsActions = new PostsActions();

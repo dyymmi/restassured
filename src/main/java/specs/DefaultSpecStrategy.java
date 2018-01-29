@@ -14,7 +14,6 @@ public class DefaultSpecStrategy implements SpecStrategy {
         return new RequestSpecBuilder()
                 .setContentType(ContentType.JSON)
                 .setBaseUri(TestConfiguration.getBaseUrl())
-               // .addParam("APPID", TestConfiguration.getToken())
                 .addFilter(new ResponseLoggingFilter())
                 .addFilter(new RequestLoggingFilter())
                 .build();
